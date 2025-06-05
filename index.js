@@ -1,3 +1,4 @@
+
 import express from "express";
 import mongoose from "mongoose";
 import cors from "cors";
@@ -12,8 +13,12 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-const MONGO_URI = process.env.MONGO_URI
+const DBUSER = encodeURIComponent(process.env.DBUSER)
+const DBPASS = encodeURIComponent(process.env.DBPASS)
+const MONGO_URI =`mongodb+srv://${DBUSER}:${DBPASS}@gcet-db.1c0gw2u.mongodb.net/?retryWrites=true&w=majority&appName=gcet-db`
 
+// const MONGO_URI = process.env.MONGO_URI
+//testing
 app.use("/users", userRouter);
 app.use("/products", productRouter);
 app.use("/orders",orderRouter)

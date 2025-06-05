@@ -1,0 +1,5 @@
+#MONGODB_URL=http://localhost:8080
+DBUSER =Ashfaq
+DBPASS = 23R11A66F0
+MONGODB_URI=mongodb+srv://Ashfaq:23R11A66F0@gcet-db.1c0gw2u.mongodb.net/gcet?
+MONGO_URI =`mongodb+srv://${DBUSER}:${DBPASS}@gcet-db.1c0gw2u.mongodb.net/?retryWrites=true&w=majority&appName=gcet-db`
